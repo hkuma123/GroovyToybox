@@ -1,4 +1,4 @@
-def dir = new File('c:/tisdev/workspace/sample/src/main/java')
+def dir = new File('c:/tisdev/workspace/LightXenlon/src/main/java')
 
 dir.traverse {
 
@@ -15,8 +15,10 @@ dir.traverse {
            int num = 0;
 
            new File(filePath).eachLine {
-               //println it
-               num++ 
+               if (it.length() != 0){
+                   //println it
+                   num++ 
+               }
            }
 
            print fileName + ' -------- '
