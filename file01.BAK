@@ -15,17 +15,20 @@ dir.traverse {
            int num = 0;
 
            new File(filePath).eachLine {
-               if ( it.length() > 0 ){
-                   println it
+               String it2 = it.replace(" ","")
+               String it3 = it2.replace("\t","")
+               if (it3.length() != 0){
+                   //println it
                    num++ 
                }
            }
 
            print fileName + ' -------- '
-           println num;
+           println num
 
        }
 
    }
 
 }
+
